@@ -8,6 +8,8 @@ API-first frontend to Ollama (backend)
 ```
 $ git clone https://github.com/carmelo0x63/FastLLMAPI.git
 
+$ cd FastLLMAPI
+
 $ python3 -m venv .
 
 $ source bin/activate
