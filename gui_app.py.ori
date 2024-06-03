@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 import requests
-import socket
 
 app = Flask(__name__)
 
@@ -8,8 +7,7 @@ API_URL = "http://localhost:8000/chat/"
 
 @app.route('/')
 def home():
-    hostname = socket.gethostname()
-    return render_template('index.html', hostname=hostname)
+    return render_template('index.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -24,7 +22,7 @@ def submit():
     if response.status_code == 200:
         response_data = response.json()
         if output_type == 'concise':
-            return jsonify({"response": response_data.get("data", "No response")})
+            return jsonify({"response": response_data.get('data', 'No response')['response']})
         else:
             return jsonify(response_data)
     else:

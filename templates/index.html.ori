@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h1>Hostname: {{ hostname }}</h1>
+    <h1>Submit Your Prompt</h1>
     <form id="promptForm">
         <label for="model">Model Name:</label>
         <select id="model" name="model">
