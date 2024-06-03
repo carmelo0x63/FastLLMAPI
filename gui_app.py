@@ -24,7 +24,8 @@ def submit():
     if response.status_code == 200:
         response_data = response.json()
         if output_type == 'concise':
-            return jsonify({"response": response_data.get("data", "No response")})
+#            return jsonify({"response": response_data.get("data", "No response")})
+            return jsonify({"response": response_data.get('data', 'No response')['response']})
         else:
             return jsonify(response_data)
     else:
