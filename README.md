@@ -1,5 +1,5 @@
 # FastLLMAPI
-API-first frontend to Ollama (backend)
+API-first frontend to Ollama (backend), based on FastAPI
 
 ### Prerequisite
 [Ollama](https://ollama.com/) must be installed and running on the destination host.
