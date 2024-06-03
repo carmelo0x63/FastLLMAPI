@@ -23,7 +23,5 @@ $ python3 -m pip install --upgrade fastapi Flask requests
 In two separate terminal windows, run the following commands:
 1. `python3 main_app.py`
 2. `python3 gui_app.py`
-The interface will be available on the host where the applications are run, on port 5000:
-```
-http://<ip_address>:5000/
-```
+<br/>
+The graphical interface will be available on the host where the applications are run, on port 5000: `http://&lt;ip_address&gt;:5000/`
