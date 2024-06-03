@@ -1,6 +1,9 @@
 # FastLLMAPI
 API-first frontend to Ollama (backend)
 
+### Prerequisite
+[Ollama](https://ollama.com/) must be installed and running on the destination host.
+
 ### Install
 ```
 $ git clone https://github.com/carmelo0x63/FastLLMAPI.git
