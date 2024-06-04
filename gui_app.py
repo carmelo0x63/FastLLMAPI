@@ -9,7 +9,7 @@ API_URL = "http://localhost:8000/chat/"
 @app.route('/')
 def home():
     hostname = socket.gethostname()
-    return render_template('index.html', hostname=hostname)
+    return render_template('index.html', hostname = hostname)
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -20,11 +20,10 @@ def submit():
         "model": llms_name,
         "prompt": prompt
     }
-    response = requests.post(f"{API_URL}{llms_name}", json=payload)
+    response = requests.post(f'{API_URL}{llms_name}', json = payload)
     if response.status_code == 200:
         response_data = response.json()
         if output_type == 'concise':
-#            return jsonify({"response": response_data.get("data", "No response")})
             return jsonify({"response": response_data.get('data', 'No response')['response']})
         else:
             return jsonify(response_data)
@@ -32,5 +31,5 @@ def submit():
         return jsonify({"error": response.status_code, "message": response.text})
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug = True, host = '0.0.0.0', port = 5000)
 
