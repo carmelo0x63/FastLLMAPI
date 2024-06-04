@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt Submission</title>
+<!--    <title>Prompt Submission</title>//-->
+    <title>Slow LLaMa</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <h1>Hostname: {{ hostname }}</h1>
     <form id="promptForm">
+<div>
         <label for="model">Model Name:</label>
         <select id="model" name="model">
             <option value="llama3">Llama 3</option>
             <option value="model2">Model 2</option>
             <option value="model3">Model 3</option>
         </select>
-        
+</div>
+<div>
         <label for="prompt">Prompt:</label>
         <textarea id="prompt" name="prompt" rows="4" cols="50"></textarea>
-
+</div>
+<div>
         <label>Output:</label><br>
         <input type="radio" id="concise" name="output" value="concise" checked>
         <label for="concise">Concise</label><br>
         <input type="radio" id="verbose" name="output" value="verbose">
         <label for="verbose">Verbose</label><br><br>
-
+</div>
         <input type="submit" value="Submit">
     </form>
 
